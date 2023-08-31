@@ -1,4 +1,5 @@
-#Combine Core and Rgroup
+# Combine Core and Rgroup
+
 Combine Core and Rgroup with RDKit
 
 ## Example
