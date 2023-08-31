@@ -14,7 +14,7 @@ Given a table of the core molecule, associated Rgroups, and reported activity va
 
 ### Example use
 
-* Prepare core and Rgroup as shown in [`combineCoreRgroup_procedure.html`](combineCoreRgroup_procedure.html) or [`combineCoreRgroup_procedure.ipynb`](combineCoreRgroup_procedure.ipynb).
+* Prepare core and Rgroup as shown in [`combineCoreRgroup_procedure.ipynb`](combineCoreRgroup_procedure.ipynb).
 
 * Weld prepared molecules using either methods.
 
