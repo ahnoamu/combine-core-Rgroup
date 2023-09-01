@@ -7,11 +7,11 @@ Combine Core and Rgroup with RDKit
 Given a table of the core molecule, associated Rgroups, and reported activity values for QSAR as shown below, the core and Rgroup can be combined using RDKit utilities as follows:
 
 ### Example Table: 
-| Compound (Core)                                        | R1      | R2
-|--------------------------------------------------------|---------|-------------|
-| CCN1C(=CC2=CC=CC=[N+]2CC)SC(=C3N(C4=CC=CC=C4S3)C)C1=O  | -CH2NH  | -CH2CH=CH2  |
-|                                                        | -CH2CH3 | -CH2NCH3    |
-|                                                        | -CH2NH  | -CH2CH=N    |
+| Compound (Core)                                        | R1      | R2          | pEC50      |
+|--------------------------------------------------------|---------|-------------|------------|
+| CCN1C(=CC2=CC=CC=[N+]2CC)SC(=C3N(C4=CC=CC=C4S3)C)C1=O  | -CH2NH  | -CH2CH=CH2  | 5.42       |
+|                                                        | -CH2CH3 | -CH2NCH3    | 6.75       |
+|                                                        | -CH2NH  | -CH2CH=N    | 4.33       |
 
 ### Example use
 
