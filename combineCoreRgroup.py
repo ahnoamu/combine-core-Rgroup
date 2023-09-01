@@ -6,13 +6,18 @@
 
 #===========================#
 # Example use:
-# python3 combineCoreRgroup.py  -c  "[*:1]CN"  -r  "[*:1]CC"  -m   m1
+# Method 1
+# >> python3 combineCoreRgroup.py  -c  "[*:1]N1C(=CC2=CC=CC=[N+]2CC)SC(=C3N(C4=CC=CC=C4S3)C)C1=O"  -r  "[*:1]CC"  -m   m1
+# Method 2
+# >> python3 combineCoreRgroup.py  -c  "[*:1]N1C(=CC2=CC=CC=[N+]2CC)SC(=C3N(C4=CC=CC=C4S3)C)C1=O"  -r  "[*:1]CC"  -m   m2
 #===========================#
+
+#============Parser=========#
 
 import sys 
 import getopt 
     
-# Parse in core and Rgroup strings
+# Parse in core, Rgroup, and method strings
      
 def core_Rgroup(): 
 	core = None
@@ -39,9 +44,8 @@ def core_Rgroup():
 
 	return core, Rgroup, method
 
-core, Rgroup, method = core_Rgroup()
 
-#===========================#
+#=========== Methods =========#
 
 import numpy as np
 import pandas as pd
@@ -138,7 +142,9 @@ def combineCoreRgroupM2(new_core,new_Rgroup):
 		print("Error")
 
 
-#===========================#
+#======= Application =======#
+
+core, Rgroup, method = core_Rgroup()
 
 if str(method) == "m1":
 	output = combineCoreRgroupM1(new_core,new_Rgroup)
@@ -153,5 +159,5 @@ else:
 # with open("out_file.txt", "a") as file1:
 # 	file1.writelines(output+"\n")
 
-#=========================== END ===========================#
+#========= END =============#
 

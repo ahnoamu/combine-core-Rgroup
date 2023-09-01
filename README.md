@@ -4,7 +4,7 @@ Combine Core and Rgroup with RDKit
 
 ## Example
 
-Given a table of the core molecule, associated Rgroups, and reported activity values for QSAR as shown below, the core and Rgroup can be combined as follows:
+Given a table of the core molecule, associated Rgroups, and reported activity values for QSAR as shown below, the core and Rgroup can be combined using RDKit utilities as follows:
 
 ### Example Table: 
 | Compound (Core)                                        | R1      | R2
