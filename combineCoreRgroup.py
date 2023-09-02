@@ -90,7 +90,7 @@ def combineCoreRgroupM1(new_core,new_Rgroup):
 def combineCoreRgroupM2(new_core,new_Rgroup):
 
 	try:
-		#### Merge core and Rgroup
+		### Merge core and Rgroup
 		
 		c = Chem.MolFromSmiles(new_core, sanitize=False)
 		r = Chem.MolFromSmiles(new_Rgroup, sanitize=False)
