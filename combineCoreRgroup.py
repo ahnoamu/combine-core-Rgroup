@@ -12,14 +12,23 @@
 # >> python3 combineCoreRgroup.py  -c  "[*:1]N1C(=CC2=CC=CC=[N+]2CC)SC(=C3N(C4=CC=CC=C4S3)C)C1=O"  -r  "[*:1]CC"  -m   m2
 #===========================#
 
+import sys 
+import getopt
+
+import numpy as np
+import pandas as pd
+
+import rdkit.Chem as Chem
+from rdkit.Chem import AllChem
+from rdkit.Chem import Draw
+from rdkit.Chem import DataStructs
+from rdkit.Chem.MolStandardize import rdMolStandardize
+     
 #============Parser=========#
 
-import sys 
-import getopt 
-    
 # Parse in core, Rgroup, and method strings
      
-def core_Rgroup(): 
+def core_Rgroup_method(): 
 	core = None
 	Rgroup = None
 	method = None
@@ -46,20 +55,6 @@ def core_Rgroup():
 
 
 #=========== Methods =========#
-
-import numpy as np
-import pandas as pd
-
-import rdkit.Chem as Chem
-from rdkit.Chem import AllChem
-from rdkit.Chem import Draw
-from rdkit.Chem import DataStructs
-from rdkit.Chem.MolStandardize import rdMolStandardize
-
-
-new_core = str(core) 
-new_Rgroup = str(Rgroup)
-
 
 # Method 1
 
@@ -144,7 +139,10 @@ def combineCoreRgroupM2(new_core,new_Rgroup):
 
 #======= Application =======#
 
-core, Rgroup, method = core_Rgroup()
+core, Rgroup, method = core_Rgroup_method()
+
+new_core = str(core) 
+new_Rgroup = str(Rgroup)
 
 if str(method) == "m1":
 	output = combineCoreRgroupM1(new_core,new_Rgroup)
