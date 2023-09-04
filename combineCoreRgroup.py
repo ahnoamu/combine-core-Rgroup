@@ -147,7 +147,7 @@ new_Rgroup = str(Rgroup)
 if str(method) == "m1":
 	output = combineCoreRgroupM1(new_core,new_Rgroup)
 elif str(method) == "m2":
-	output = combineCoreRgroupM1(new_core,new_Rgroup)
+	output = combineCoreRgroupM2(new_core,new_Rgroup)
 else:
 	print("\nWrong input method. Try m1 or m2 \n")
 
